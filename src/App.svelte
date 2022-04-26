@@ -1,30 +1,21 @@
 <script>
-	export let name;
+	import Nabvar from './Components/Nabvar.svelte';
+	import Title from './Components/Title.svelte';
+	import Expenses from './Components/Expenses.svelte';
+	import expenses from './helpers/expenses';
 </script>
 
-<main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+<Nabvar />
+<main class="content">
+	<Title title="Add Expense:" />
+	<Expenses {expenses} />
 </main>
 
 <style>
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
+	.content {
+		padding: 3rem 0;
+		width: 85vw;
+		max-width: 35rem;
 		margin: 0 auto;
-	}
-
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
-
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
 	}
 </style>
