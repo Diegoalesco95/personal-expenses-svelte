@@ -1,7 +1,15 @@
+<script>
+	export let handleShowForm;
+</script>
+
 <nav class="nav">
 	<div class="nav-center">
 		<h1 class="nav-title">Budget Calculator</h1>
-		<button type="button" class="nav-btn">+ Add Item</button>
+		<button
+			class="nav-btn"
+			on:click={() => handleShowForm(true, true)}
+			type="button">+ Add Item</button
+		>
 	</div>
 </nav>
 

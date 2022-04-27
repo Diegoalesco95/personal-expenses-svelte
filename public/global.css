@@ -133,43 +133,6 @@ Buttons
 	border-color: var(--darkGrey);
 }
 
-/* 
-====== 
-Expense Form
-======
-*/
-
-.expense-form {
-	background: var(--mainWhite);
-	padding: 1.25rem 1rem;
-	text-transform: capitalize;
-	border-radius: var(--mainBorderRadius);
-	box-shadow: var(--lightShadow);
-}
-
-.form-control label {
-	display: block;
-}
-
-.form-control input {
-	width: 100%;
-	border: none;
-	border-bottom: 2px solid var(--darkGrey);
-	margin-bottom: 1.25rem;
-	padding: 0.5rem;
-	font-size: 1.2rem;
-}
-
-.form-empty {
-	text-align: center;
-	color: red;
-}
-
-.form {
-	position: relative;
-	margin-bottom: 5rem;
-}
-
 .close-btn {
 	position: absolute;
 	top: 0;
@@ -184,53 +147,6 @@ Expense Form
 	border: none;
 	color: red;
 	cursor: pointer;
-}
-
-/* 
-====== 
-Modal
-======
-*/
-.modal-container {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background: rgba(0, 0, 0, 0.7);
-	z-index: 2;
-}
-
-.modal-content {
-	background: var(--mainWhite);
-	width: 85vw;
-	max-width: 35rem;
-	margin: 0 auto;
-	margin-top: 5rem;
-	padding: 3rem;
-	border-radius: var(--mainBorderRadius);
-	position: relative;
-}
-
-.modal-content .expense-form {
-	box-shadow: none;
-}
-
-.modal-container .form {
-	margin-bottom: 0;
-}
-
-.modal-container .expense-form {
-	padding: 1.25rem 0;
-}
-
-.modal-container .form {
-	position: static;
-}
-
-.modal-container .close-btn {
-	top: 2%;
-	right: 3%;
 }
 
 /* 

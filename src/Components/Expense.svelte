@@ -1,4 +1,7 @@
 <script>
+	import { getContext } from 'svelte';
+	import { slide, fly } from 'svelte/transition';
+
 	export let id;
 	export let name = '';
 	export let amount = 0;
@@ -8,6 +11,8 @@
 	function toggleAmount() {
 		displayAmount = !displayAmount;
 	}
+
+	const { removeExpense, handleSetEdit } = getContext('state');
 </script>
 
 <article class="single-expense">
@@ -23,12 +28,17 @@
 			</button>
 		</h2>
 		{#if displayAmount}
-			<h4>Amount: ${amount}</h4>
+			<h4 transition:slide>Amount: ${amount}</h4>
 		{/if}
 	</div>
 	<div class="expense-buttons">
-		<button class="expense-btn edit-btn">Edit</button>
-		<button class="expense-btn delete-btn">Delete</button>
+		<button class="expense-btn edit-btn" on:click={() => handleSetEdit(id)}
+			>Edit</button
+		>
+		<button
+			class="expense-btn delete-btn"
+			on:click={() => removeExpense(id)}>Delete</button
+		>
 	</div>
 </article>
 
